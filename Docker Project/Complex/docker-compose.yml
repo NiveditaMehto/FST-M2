@@ -18,7 +18,7 @@ services:
   api:
     build:
       context: ./server
-    image: "poorvajaraypudi/complex-api"
+    image: "niveditamehto/complex-api"
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
@@ -32,13 +32,13 @@ services:
   client:
     build:
       context: ./client
-    image: "poorvajaraypudi/complex-client"
+    image: "niveditamehto/complex-client"
 
   #worker service
   worker:
     build:
       context: ./worker
-    image: "poorvajaraypudi/complex-worker"
+    image: "niveditamehto/complex-worker"
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
